@@ -16,15 +16,15 @@ void secondDegreeEquationRealSqrs(double a, double b, double c)
     printf("%d",D);
     if (D > 0)
     {
-        printf("2 valos gyoke van");
+        printf("2 real roots");
     }
     else if (D == 0)
     {
-        printf("1 valos gyoke van");
+        printf("1 real root");
     }
     else
     {
-        printf("Nincs valos gyoke");
+        printf("No real root(s)");
     }
 }
 
@@ -32,22 +32,22 @@ void secondDegreeEquationSolutions(double a, double b, double c){
     double D = (b * b) - (4 * a * c);
     double x1,x2;
     if(D < 0){
-        printf("Nincs valos gyöke");
+        printf("No real root(s)");
     }
     else if(D == 0){
         x1 = -b / (2*a);
-        printf("Az egyenletnek 1 valos gyoke van: x1 = x2 = %lf", x1);
+        printf("Only has one real root: x1 = x2 = %lf", x1);
     }
     else if(D > 0){
         x1 = (-b + sqrt(D)) / (2 * a);
         x2 = (-b - sqrt(D))/ (2 * a);
-        printf("Az egyenletnek 2 valos gyoke van: x1 = %lf, x2 = %lf", x1,  x2);
+        printf("The equation has 2 real roots: x1 = %lf, x2 = %lf", x1,  x2);
     }
 }
 
 int main()
 {
-    /*1.Feladat
+    //1.Feladat
         double height, diameter;
         printf("Enter the height:\n");
         scanf("%lf",&height);
@@ -55,45 +55,45 @@ int main()
         scanf("%lf",&diameter);
         double area = areaCalcTube(height,diameter);
 
-        printf("%lf doboz festek kell",area);
-    */
+        printf("%lf can of paint you need",area);
+    
 
     //2.Feladat
-    // double a,b,c;
-    // printf("Add meg az 'a'-t:\n");
-    // scanf("%lf",&a);
-    // printf("Add meg az 'b'-t:\n");
-    // scanf("%lf",&b);
-    // printf("Add meg az 'c'-t:\n");
-    // scanf("%lf",&c);
+    double a,b,c;
+    printf("Enter the 'a' side:\n");
+    scanf("%lf",&a);
+    printf("Enter the 'b' side:\n");
+    scanf("%lf",&b);
+    printf("Enter the 'c' side:\n");
+    scanf("%lf",&c);
 
-    // secondDegreeEquation(a,b,c);
+    secondDegreeEquation(a,b,c);
 
     //3.Feladat
-    // int num = 1;
+    int num = 1;
 
-    // while (num <= 20){
-    //     printf("%d\n",num);
-    //     num++;
-    // }
+    while (num <= 20){
+        printf("%d\n",num);
+        num++;
+    }
 
     //4.Feladat
-    // int length;
-    // printf("Mekkora legyen a szakasz?\n");
-    // scanf("%d",&length);
-    // printf("+");
-    // for(int i = 0; i < length; i++){
-    //     printf("-");
-    // }
-    // printf("+");
+    int length;
+    printf("Length of the line?:\n");
+    scanf("%d",&length);
+    printf("+");
+    for(int i = 0; i < length; i++){
+        printf("-");
+    }
+    printf("+");
 
     //5.Feladat
     double a,b,c;
-    printf("Add meg az 'a'-t:\n");
+    printf("Enter the 'a' side:\n");
     scanf("%lf",&a);
-    printf("Add meg az 'b'-t:\n");
+    printf("Enter the 'b' side:\n");
     scanf("%lf",&b);
-    printf("Add meg az 'c'-t:\n");
+    printf("Enter the 'c' side:\n");
     scanf("%lf",&c);
     secondDegreeEquationSolutions(a,b,c);
     return 0;
